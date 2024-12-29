@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu du Restaurant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        .menu-offer {
+            color: red;
+            font-weight: bold;
+        }
+
+        .menu-price {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .menu-image {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Barre de navigation -->
+    <nav class="navbar is-dark">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">Accueil</a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="menu.html">Menu</a>
+                    <a class="navbar-item" href="avis.html">Avis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section principale -->
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Bienvenue au Restaurant Gourmet</h1>
+                <h2 class="subtitle">Découvrez notre menu délicieux et varié</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section du menu -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title has-text-centered">Notre Menu</h2>
+            <p class="subtitle has-text-centered">Un mélange de saveurs pour satisfaire tous les goûts.</p>
+
+            <div class="columns is-multiline ">
+
+                <!-- Plat 1 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="pizza.jpg" alt="Pizza Margherita">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Pizza Margherita</p>
+                            <p class="menu-price">Prix : 10€ <span class="menu-offer">(Offre spéciale : 8€)</span></p>
+                            <button class="button is-link voir-details" data-target="modal-pizza">Voir les détails</button>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Pizza -->
+                <div id="modal-pizza" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Pizza Margherita</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <p>Une pizza classique avec sauce tomate, mozzarella et basilic frais.</p>
+                            <p>Prix régulier : 10€</p>
+                            <p><strong>Offre spéciale : 8€</strong></p>
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button modal-close">Fermer</button>
+                        </footer>
+                    </div>
+                </div>
+
+
+                <!-- Plat 2 -->
+                <div class="column is-one-third">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="menu-image" src="Pâtes Carbonara.jpg" alt="Pâtes Carbonara">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Pâtes Carbonara</p>
+                        <p class="menu-price">Prix : 12€</p>
+                        <button class="button is-link voir-details" data-target="modal-carbonara">Voir les détails</button>
+
+                    </div>
+                </div>
+            
+            <!-- Modal Carbonara -->
+            <div id="modal-carbonara" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Pâtes Carbonara</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <p>Des pâtes savoureuses avec sauce crémeuse, lardons fumés et parmesan.</p>
+                        <p>Prix : 12€</p>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button modal-close">Fermer</button>
+                    </footer>
+                </div>
+            </div>
+
+            <!-- Plat 3 -->
+            <div class="column is-one-third">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="menu-image" src="burgerr.jpg" alt="Burger Maison">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Burger Maison</p>
+                        <p class="menu-price">Prix : 14€ <span class="menu-offer">(Offre spéciale : 12€)</span></p>
+                        <button class="button is-link voir-details" data-target="modal-burger">Voir les détails</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Burger -->
+            <div id="modal-burger" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Burger Maison</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <p>Burger juteux avec steak, fromage, laitue et sauce spéciale maison.</p>
+                        <p>Prix régulier : 14€</p>
+                        <p><strong>Offre spéciale : 12€</strong></p>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button modal-close">Fermer</button>
+                    </footer>
+                </div>
+             </div>
+        <!-- Plat 4 -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="salae césar .jpg" alt="Salade César">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Salade César</p>
+                    <p class="menu-price">Prix : 8€ <span class="menu-offer">(Offre spéciale : 7€)</span></p>
+                    <button class="button is-link voir-details" data-target="modal-salade">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Salade César -->
+        <div id="modal-salade" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Salade César</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Salade fraîche avec poulet grillé, croûtons et une sauce César maison.</p>
+                    <p>Prix régulier : 8€</p>
+                    <p><strong>Offre spéciale : 7€</strong></p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Plat 5 -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="soupe de jour.jpg" alt="Soupe du Jour">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Soupe du Jour</p>
+                    <p class="menu-price">Prix : 6€</p>
+                    <button class="button is-link voir-details" data-target="modal-soup">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Soupe -->
+        <div id="modal-soup" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Soupe du Jour</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Une soupe chaude et réconfortante, change chaque jour.</p>
+                    <p>Prix : 6€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Plat 6 -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="dessert.jpg" alt="Dessert du Chef">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Dessert du Chef</p>
+                    <p class="menu-price">Prix : 7€</p>
+                    <button class="button is-link voir-details" data-target="modal-pizza">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Dessert -->
+        <div id="modal-dessert" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Dessert du Chef</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Un dessert délicieux préparé par notre chef pâtissier.</p>
+                    <p>Prix : 7€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Plat 7 -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="tiramisu.jpg" alt="Tiramisu">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Tiramisu</p>
+                    <p class="menu-price">Prix : 7€</p>
+                    <button class="button is-link voir-details" data-target="modal-tiramisu">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Tiramisu -->
+        <div id="modal-tiramisu" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Tiramisu</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Un dessert italien classique à base de mascarpone, café et cacao.</p>
+                    <p>Prix : 7€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Plat 8 -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="crepe.jpg" alt="Crêpe Chocolat Banane">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Crêpe Chocolat Banane</p>
+                    <p class="menu-price">Prix : 6.5€</p>
+                    <button class="button is-link voir-details" data-target="modal-crepe">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Crêpe -->
+        <div id="modal-crepe" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Crêpe Chocolat Banane</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Crêpe fine au chocolat et banane, idéale pour les amateurs de sucré.</p>
+                    <p>Prix : 6.5€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Plat 9 -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="pizzanep.jpg" alt="Pizza Neptune">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Pizza Neptune</p>
+                    <p class="menu-price">Prix : 12€</p>
+                    <button class="button is-link voir-details" data-target="modal-neptune">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Neptune -->
+        <div id="modal-neptune" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Pizza Neptune</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Une pizza à base de fruits de mer, idéale pour les amateurs de fruits de mer.</p>
+                    <p>Prix : 12€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Plat 10 : Lasagne à la bolognaise -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="lasagne.jpg" alt="Lasagne à la bolognaise">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Lasagne à la bolognaise</p>
+                    <p class="menu-price">Prix : 15€</p>
+                    <button class="button is-link voir-details" data-target="modal-lasagne">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Lasagne à la bolognaise -->
+        <div id="modal-lasagne" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Lasagne à la bolognaise</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Une lasagne traditionnelle avec une sauce bolognaise riche et du fromage fondant.</p>
+                    <p>Prix : 15€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Plat 11 : Tarte au chocolat maison -->
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img class="menu-image" src="tarte.jpg" alt="Tarte au chocolat maison">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4">Tarte au chocolat maison</p>
+                    <p class="menu-price">Prix : 6.5€</p>
+                    <button class="button is-link voir-details" data-target="modal-tartechocolat">Voir les
+                        détails</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Tarte au chocolat maison -->
+        <div id="modal-tartechocolat" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Tarte au chocolat maison</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Une tarte au chocolat intense faite maison, avec une pâte croustillante et un cœur fondant.</p>
+                    <p>Prix : 6.5€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Plat 12 : Poisson grillé avec légumes -->
+        <div class="column is-one-third">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img class="menu-image" src="poissonaveclegumes.webp" alt="Poisson grillé avec légumes">
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title is-4">Poisson grillé avec légumes</p>
+                <p class="menu-price">Prix : 18€</p>
+                <button class="button is-link voir-details" data-target="modal-poisson">Voir les détails</button>
+            </div>
+        </div>
+        
+
+        <!-- Modal Poisson grillé avec légumes -->
+            <div id="modal-poisson" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Poisson grillé avec légumes</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                <section class="modal-card-body">
+                    <p>Poisson frais grillé, accompagné de légumes de saison sautés à l'huile d'olive.</p>
+                    <p>Prix : 18€</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button modal-close">Fermer</button>
+                </footer>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2024 Restaurant Gourmet - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sélectionner tous les boutons "Voir les détails"
+            const detailButtons = document.querySelectorAll('.voir-details');
+
+            if (detailButtons.length === 0) {
+                console.error("Aucun bouton 'Voir les détails' trouvé.");
+            }
+
+            // Ajouter un écouteur d'événement pour chaque bouton
+            detailButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.getAttribute('data-target');
+                    if (!modalId) {
+                        console.error("Aucun 'data-target' défini pour ce bouton :", button);
+                        return;
+                    }
+
+                    const modal = document.getElementById(modalId);
+                    if (!modal) {
+                        console.error(`Modal avec l'ID "${modalId}" introuvable.`);
+                        return;
+                    }
+
+                    modal.classList.add('is-active');
+                });
+            });
+
+            // Ajouter un écouteur d'événement pour fermer les modals
+            const closeElements = document.querySelectorAll('.modal .delete, .modal-close, .modal-background');
+            closeElements.forEach(element => {
+                element.addEventListener('click', (event) => {
+                    const modal = event.target.closest('.modal');
+                    if (modal) {
+                        modal.classList.remove('is-active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
